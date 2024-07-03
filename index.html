@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Recipe</title>
+    <link rel="shortcut icon" href="./img/favicon-recipe.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body >
     <div class="container">
         <h1>Food Recipe</h1>
-        <div id="search">
-            <input type="text" id="food" placeholder="Enter food name">
-            <button class="btn" onclick="searchRecipe()">Search</button>
-        </div>
-        <div class="row " id="food-box">
+        <form id="search" onsubmit="searchRecipe(event)">
+            <input type="text" id="food" placeholder="Enter food name" >
+            <button class="btn">Search</button>
+        </form>
+        <div class="row justify-evenly" id="food-box">
+            <div class="col-12"><h2>Loading...</h2></div>
+            <div class="col-4 col-t-2 col-mp-12 card"></div>
+            <div class="col-4 col-t-2 col-mp-12 card"></div>
+            <div class="col-4 col-t-2 col-mp-12 card"></div>
+            <div class="col-4 col-t-2 col-mp-12 card"></div>
+            <div class="col-4 col-t-2 col-mp-12 card"></div>
+            <div class="col-4 col-t-2 col-mp-12 card"></div>
+            <div class="col-4 col-t-2 col-mp-12 card"></div>
+            <div class="col-4 col-t-2 col-mp-12 card"></div>
+            <div class="col-4 col-t-2 col-mp-12 card"></div>
         </div>
     </div>
     <script src="./js/main.js"></script>

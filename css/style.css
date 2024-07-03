@@ -37,47 +37,63 @@ body{font-size: 16px; font-family:var(--ff);}
 .row{display: flex; flex-flow: row wrap; margin: 0 -1rem;}
 [class^="col"]{flex: 1 0 auto; padding: 0 1rem;}
 
-.col-1{ flex-basis:8.33%; max-width: 8.33%;}
-.col-2{ flex-basis:16.66%; max-width: 16.66%;}
-.col-3{ flex-basis:25%; max-width: 25%;}
 .col-4{ flex-basis:33.33%; max-width: 33.33%;}
-.col-5{ flex-basis:41.66%; max-width: 41.66%;}
-.col-6{ flex-basis:50%; max-width: 50%;}
-.col-7{ flex-basis:58.33%; max-width: 58.33%;}
-.col-8{ flex-basis:66.66%; max-width: 66.66%;}
-.col-9{ flex-basis:75%; max-width: 75%;}
-.col-10{ flex-basis:83.33%; max-width: 83.33%;}
-.col-11{ flex-basis:91.66%; max-width: 91.66%;}
 .col-12{ flex-basis:100%; max-width: 100%;}
 
 .flex{ display: flex; }
-.justify-space-bet{ justify-content: space-between;}
 .justify-evenly{justify-content: space-evenly;}
 .justify-center{ justify-content: center;}
-.align-center{ align-items: center;}
 .gap{gap: 1rem;}
 
-.btn{border: none; border-radius: 10px; background: var(--yellow); padding: 1rem 2rem; font: medium 1rem var(--ff);}
-.img-res{width: 100%; aspect-ratio: 1.6/1; border-top-right-radius: 10px;}
+.btn{ border: none; border-radius: 10px; background: var(--yellow); padding: 1rem 2rem; font: medium 1rem var(--ff);}
+.img-res{width: 100%; height: 170px; border-top-right-radius: 10px;}
 
 /* custom css */
 
 
-h1{font-size: 32px; text-align: center; margin:1rem auto; color: #17777b;}
+h1{font-size: 32px; text-align: center; margin:.8rem auto; color: #17777b;}
 #search{ padding: 30px 10px; }
 #search #food{width: 80%; font-size: 22px; padding: .6rem 1rem; border: 1px solid gray; border-radius: 10px;}
 
-#food-box{ margin-top:1rem; padding: 1rem;}
+#food-box{ padding: 1rem;}
+#food-box h3{text-align: center; font-size: 28px; font-weight: 600; margin: 1rem auto;}
 
 .box-recipe{ margin-bottom: 2rem;}
 
-.card{
-    border: 1px solid gray;
+.card {
+    border: 1px solid #b1afaf;
     border-radius: 10px;
-    height: 450px;
-    overflow: hidden;
+    height: 350px;
+    overflow: scroll;
+    box-shadow: 2px 2px 5px;
+    scrollbar-width: none;
+    scrollbar-color: #ddd #0000; /* Thumb and track colors */
+    position: relative;
 }
 
-.card h3{ font-size: 22px; font-weight: 300; color: #af25ef; text-align: center; padding: .5rem;}
-.card li{font-size: 16px; font-weight: 300; color: #7b7173; padding:0 16px 10px 16px ; }
-.card p{font-size: 18px; padding: 10px 16px; color: #282828;}
+.card h4{ font-size: 1.2rem; font-weight: 500; color: #282728; text-align: center; padding: .5rem;}
+.card li{font-size: 1rem; font-weight: 300; color: #7b7173; padding:0 1rem .6rem 1rem ; }
+.card button{font-size: 1rem; background:#fff; border: none; position: absolute; bottom: 50px; right: 25px;}
+.card p{font-size: 1.2rem; padding: .2rem 1rem; color: #282828;}
+
+
+@media screen and (max-width:1225px){
+    html{ font-size: 13px;}
+    
+}
+
+@media screen and (max-width:980px){
+    .col-t-6{ flex-basis: 50%; max-width: 50%;}
+    
+}
+
+@media screen and (max-width:767px){
+    html{ font-size: 12px;}
+    
+}
+
+@media screen and (max-width:460px){
+    .col-mp-12{flex-basis: 100%; max-width: 100%;}
+    .card{height: 300px;}
+    
+}
